@@ -2,32 +2,119 @@ Please answer the below core-java Questions:
 
 
 What jdk contains or composed of and define each components?
+Ans. Jdk consists of Java Compiler, Java Interpreter, Java Disassembler, Java Header File Generator, Java Documentation, Java Debugger and Java Applet Viewer.
+Java Compiler: It reads class and interface definitions, written in the Java programming language, and compiles them into bytecode class files. The javac tool can be accessed using javac command
+in the command prompt.
+
+Java Interpreter: It is used to interpret the .class Java files that have been compiled by Java compiler (javac). Java interpreter is accessed using java command.
+
+Java Disassembler: The javap command is the disassembly tool of JDK that disassembles one or more class files.
+
+Java Header File Generator: It generates C header and source files that are needed to implement native methods, it can be accessed using javah command-line tool.
+
+Java Documentation: It helps to maintain code.
+
+Java Debugger: The Java Debugger, jdb, is a simple command-line debugger for Java classes.
+
+Java Applet Viewer:  This is used to view the Java applets.
+
 What is IDE?
+Ans. A Java IDE (Integrated Development Environment) is a software application which enables users to more easily write and debug Java programs.
+
 What are the IDEs available in the market to support java?
+Ans. Eclipse, NetBeans, IntelliJ IDEA, JCreator, Processing, BlueJ, Kawa, JBuilder, DrJava etc.
+
 Explain the entire java life cycle.
-what is class?
+Ans. Editor > Source Code > Java Compiler > Bytecodes > JVM > Operating System.
+Editor is used to write the source code of a java application. Java Compiler, Javac then compiles the source code and generates bytecodes with classname.class extension. This is classname.class is then interpreted by JVM and proceeded to the operating system to run.
+What is class?
+Ans. A class is a blueprint or a template for creating different objects which defines its properties and behaviors
+
 What is object?
+Ans. Objects have a state and behavior. Object's state is stored in fields and behavior is shown via methods.
+
 What is the entry point of an application?
+Ans. Main () method is the entry point of a java application.
+
 Why main is static?
+Ans. Main is static becuase main() is called by the JVM before any objects are made. Since it is static it can be directly invoked via the class.
+
 What is the difference between an Interface and Abstract class?
+Ans. Methods of a Java interface are implicitly abstract and cannot have implementations. A Java abstract class can have instance methods that implements a default behaviour. Variables declared in a Java interface is by default final. An abstract class may contain non-final variables.
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+Ans. You cannot make an object from an interface and Abstract class. You can create objects of a class that implements interface or extends abstract class/.
+
 what is Access Specifier?
+Ans. Access Specifier regulate access to classes, fields and methods in Java.
+
 What is OOP ? Define each feature of java OOP.
+Ans. Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions" and data rather than logic.
+Features of java OOP:
+(a) Abstraction: For implementation hiding. Example- Interface > Abstract class > Concrete class.
+(b) Encapsulation: For data hiding- public, private and protected.
+(c) Inheritance: Process of acquiring the properties of one class to another class.
+(d) Polymorphism: The ability of an object to take on many forms.
+
 What is API? Name list of API that you have used so far.
+Ans. Java application programming interface (API) is a list of all classes that are part of the Java development kit (JDK). It includes all Java packages, classes, and interfaces, along with their methods, fields, and constructors.
+I have used classes from java.util package and java.lang package. Classes that I used in the java.lang package are: Double, Float, Integer, String, StringBuffer, System, and Math.
+From java.util class, I've mostly used Scanner class.
+
 Does java support multiple inheritance?
+Ans. Java doesn't support multiple inheritance. It is done to avoid ambiguities that may arise from the two same but differently implemented methods from multiple inheritance.
+
 What is method overloading and when it happens?
+Ans. Method overloading happens when two or more same methods can take different type and number of parameters.
+
 What is method overriding and when it happens?
+Ans. Method overriding happens when a method of a class is modified in another class.
+
 Explain exceptions in java and how to handle it.
+Ans. An exception (or exceptional event) is a problem that arises during the execution of a program, it can logical or arithmatical error. It disrupts the normal flow of a program and terminates abnormally.
+Exception can handled using try/catch block and/or using throws keyword
+
 What is static keyword in java? How it has been used in variables and methods ?
+Ans. The static keyword denotes that a member variable, or method, can be accessed without requiring an instantiation of the class to which it belongs. It can be used by putting the keyword 'static' before the type of variable and method.
+
 What is final and how it has been used variables and methods?
+Ans. In Java final keyword is used to variables to make its values not to be changed. It can be used by putting the keyword 'final' before the type of variable and method
+
 What is final, finally and finalize?
+Ans. Final: Final can be used to mark a variable "unchangeable" and a method "unoverideable". It can also make a class not "inheritable", i.e. the class can not be subclassed.
+Finally: Finally is used in a try/catch statement to execute code "always".
+Finalize: Finalize is called when an object is garbage collected. You rarely need to override it as it is automaically called by JVM.
+
 What is a constructor ?
+Ans. A constructor is a bit of code that allows you to create objects from a class. You call the constructor by using the keyword new, followed by the name of the class, followed by any necessary parameters.
+
 What is "this" keyword in java ?
+Ans. The "this" keyword can be used to refer to any member of the current object from within an instance method or a constructor.
+
 What is "super" keyword in java?
+Ans. The super keyword in java is a reference variable that is used to refer immediate parent class object.
+
 What is JVM stand for ?
+Ans. JVM stands for Java Virtual Machine.
+
 What version of java are you using?
+Ans. 1.8.0_91
+
 What is JAR stand for ?
+Ans. JAR stands for Java Archive.
+
 What is compile time and run time?
+Ans. Compile time: The source code must be compiled into machine code in order to become and executable program. This compilation process is referred to as compile time.
+Run time: A compiled program can be opened and run by a user. When an application is running, it is called runtime.
+
 What is heap?
+Ans. The heap is the runtime data area from which memory for all class instances and arrays is allocated. The heap is created on virtual machine start-up. Heap storage for objects is reclaimed by an automatic storage management system (known as a garbage collector); objects are never explicitly deallocated.
+
 How java manage it's memory?
+Ans. Java objects reside in an area called the heap. The heap is created when the JVM starts up and may increase or decrease in size while the application runs. When the heap becomes full, garbage is collected. During the garbage collection objects that are no longer used are cleared, thus making space for new objects.
+    JVM uses more memory than just the heap. For example Java methods, thread stacks and native handles are allocated in memory separate from the heap, as well as JVM internal data structures.
+    The heap is sometimes divided into two areas (or generations) called the nursery (or young space) and the old space. The nursery is a part of the heap reserved for allocation of new objects. When the nursery becomes full, garbage is collected by running a special young collection, where all objects that have lived long enough in the nursery are promoted (moved) to the old space, thus freeing up the nursery for more object allocation. When the old space becomes full garbage is collected there, a process called an old collection.
+
 What is the difference between String, StringBuffer and StringBuilder?
+Ans. String is immutable, if you try to alter their values, another object gets created, whereas StringBuffer and StringBuilder are mutable so they can change their values.
+The difference between StringBuffer and StringBuilder is that StringBuffer is thread-safe. So when the application needs to be run only in a single thread then it is better to use StringBuilder. StringBuilder is more efficient than StringBuffer.

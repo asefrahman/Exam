@@ -1,31 +1,123 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+Ans. We need data structure because by using it we can store and organize information  in a computer  in such a way that can be retrieved and used most productively and efficiently.
+
 List out the areas in which data structures are applied extensively?
+Ans.
+(a)Compiler Design,
+(b)Operating System,
+(c)Database Management System,
+(d)Statistical analysis package,
+(e)Numerical Analysis,
+(f)Graphics,
+(g)Artificial Intelligence,
+(h)Simulation
+
 what is an Array?
+Ans. An array is a container object that holds a fixed number of values of a single type.
+
 what is the difference between the Array and ArrayList?
+Ans. Array is of fixed length but the length of ArrayList is dynamic.
+
 what is LinkedList?
+Ans. A linked list is a linear data structure where each element is a separate object. Each element (node) of a list is comprising of two items - the data and a reference to the next node. The last node has a reference to null.
+
 what is queue?
+Ans. Queue is an abstract data structure. In contrast to Queue, queue is opened at both end. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue)
+
 what is stack?
+Ans. Stack is an ordered list of similar data type. Stack is a LIFO structure. (Last in First out). push() function is used to insert new elements into the Stack and pop() is used to delete an element from the stack. Both insertion and deletion are allowed at only one end of Stack called Top.
+
 what is FIFO and LIFO?
+Ans. FIFO: First in first out, LIFO: Last in first out
+
 what is the order of complexity?
+Ans. It is a form of runtime analysis that measures the efficiency of an algorithm in terms of the time it takes for the algorithm to run as a function of the input size.
+
 what is the best case to search an element from an array?
+Ans. O(1)
+
 what is the worst case to search an element from an array?
+Ans. O(n)
+
 what is tree in data structure?
+Ans. A tree is a widely used abstract data type (ADT)—or data structure implementing this ADT—that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
+
 what is graph in data structure?
+Ans. A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
+
 what is the difference between the HashTable and HashMap?
+Ans. In computing, a hash table (hash map) is a data structure used to implement an associative array, a structure that can map keys to values. A hash table uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+Ans. RDMS - Array (i.e. Array of structures)
+Network data model – Graph
+Hierarchical data model – Trees
+
 How HashMap works in java?
+Ans. HashMap in Java works on hashing principle. It is a data structure which allows us to store object and retrieve it in constant time O(1) provided we know the key. In hashing, hash functions are used to link key and value in HashMap. Objects are stored by calling put(key, value) method of HashMap and retrieved by calling get(key) method.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+Ans. Thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.
+
 What are the different ways of copying an array into another array?
+Ans.
+(a) System.arraycopy( src, 0, dest, 0, src.length )
+(b) int[] a = new int[]{1,2,3,4,5};
+    int[] b = a.clone();
+(c) int[] a = {1,2,3,4,5};
+    int[] b = Arrays.copyOf(a, a.length);
+
 What is difference between an array and a linked list?
+Ans. LinkedList and ArrayList are two different implementations of the List interface. LinkedList implements it with a doubly-linked list. ArrayList implements it with a dynamically re-sizing array.
+
 What is DFS and BFS?
+Ans. DFS: Depth First Search visits all children before visiting neighbors.  It uses a stack. Always move to next highest-rated, unvisited neighbor.  If all neighbors have been visited, then backtrack.
+BFS: Breadth First Search visits all neighbors before visiting children.  It uses a queue. Process a node and its neighbors completely.  After that, move on to the next node in the queue.
+
 What is Recursion?
+Ans. A function is recursive when
+  (a)A function has a simple base case, and when
+  (b)All other cases have rules which reduce to the base case.
+
 What is Big-(O)-notation?
+Ans. Big O notation is used in Computer Science to describe the performance or complexity of an algorithm.
+
 Outlined different kind of sorting algorithm with time complexity?
+Ans.
+1. Quicksort:
+Best- O(n log(n)), Average- O(n log(n)), Worst - O(n^2)
+2. Mergesort:
+Best- O(n log(n)), Average- O(n log(n)), Worst - O(n log(n))
+3. Selection Sort:
+Best- O(n^2), Average- O(n^2), Worst- O(n^2)
+4. Insertion Sort:
+Best- O(n), Average- O(n^2), Worst- O(n^2)
+5. Bubble Sort:
+Best- O(n), Average- O(n^2), Worst- O(n^2)
+6. Shell Sort:
+Best- O(n log(n)), Average- O(n log(n)^2), Worst- O(n log(n)^2)
+7. Bucket Sort:
+Best- O(n+k), Average- O(n+k), Worst- O(n^2)
+8. Heap Sort:
+Best- O(n log(n)), Average- O(n log(n)), Worst - O(n log(n))
+
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
+
+
+                        Access  Search  Insertion   Deletion |  Access  Search  Insertion   Deletion
+------------------------------------------------------------------------------------------------------
+Array                   O(1)    O(n)    O(n)        O(n)        O(1)    O(n)    O(n)    O(n)
+Stack                   O(n)    O(n)    O(1)        O(1)        O(n)    O(n)    O(1)    O(1)
+Queue                   O(n)    O(n)    O(1)        O(1)        O(n)    O(n)    O(1)    O(1)
+Single Linked List      O(n)    O(n)    O(1)        O(1)        O(n)    O(n)    O(1)    O(1)
+Doubly Linked List      O(n)    O(n)    O(1)        O(1)        O(n)    O(n)    O(1)    O(1)
+Hash Table                      O(1)    O(1)        O(1)                O(1)    O(1)    O(1)
+Binary Search Table O(log(n))O(log(n))O(log(n))O(log(n))        O(n)    O(n)    O(n)    O(n)
+Red-Black Tree      O(log(n))O(log(n))O(log(n))O(log(n))     O(log(n))O(log(n))O(log(n))O(log(n))
